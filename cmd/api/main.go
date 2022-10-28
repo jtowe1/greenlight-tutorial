@@ -9,6 +9,7 @@ import (
 	"github.com/jtowe1/greenlight-tutorial/internal/data"
 	"github.com/jtowe1/greenlight-tutorial/internal/jsonlog"
 	"github.com/jtowe1/greenlight-tutorial/internal/mailer"
+	"github.com/jtowe1/greenlight-tutorial/internal/vcs"
 	"os"
 	"runtime"
 	"strings"
@@ -18,7 +19,9 @@ import (
 	_ "github.com/lib/pq"
 )
 
-const version = "1.0.0"
+var (
+	version = vcs.Version()
+)
 
 type config struct {
 	port int
