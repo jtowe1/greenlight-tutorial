@@ -1,0 +1,8 @@
+{
+  email jeremiahtowe@gmail.com
+}
+
+greenlight.jeremiahtowe.com {
+  respond /debug/* "Not Permitted" 403
+  reverse_proxy localhost:4000
+}
